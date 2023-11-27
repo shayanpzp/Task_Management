@@ -1,15 +1,24 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from core.models import Category, Tag, Task
 from .models import Task
+from django.db.models import Q
 from .forms import TaskForm
 
 def all_tasks(request):
     tasks = Task.objects.all()
     return render(request, 'all_tasks.html', {'tasks': tasks})
 
+
 def search_tasks(request):
-    
-    return render(request, 'search_tasks.html')
+    query = request.GET.get('q')
+
+    if query:
+        tasks = Task.objects.filter(Q(title__icontains=query) | Q(tags__name__icontains=query))
+    else:
+        tasks = Task.objects.all()
+
+    return render(request, 'search_tasks.html', {'tasks': tasks, 'query': query})
+
 
 def view_task(request, task_id):
     task = Task.objects.get(pk=task_id)
