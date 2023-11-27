@@ -1,0 +1,27 @@
+body.dark-mode {
+    background-color: #131921;
+    
+}
+
+body.dark-mode table {
+    color: #ffffff;
+}
+body.dark-mode h2{
+    color: #ffffff;
+}
+body.dark-mode a{
+    color: goldenrod;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+a{
+    color: crimson;
+    text-decoration: none;
+}
+
