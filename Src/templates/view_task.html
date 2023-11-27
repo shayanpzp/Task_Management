@@ -3,6 +3,16 @@
 {% block title %}{{ task.title }}{% endblock %}
 
 {% block content %}
-  <h2>{{ task.title }}</h2>
+  <h1>{{ task.title }}</h1>
+  <hr>
+  <h3>Description : {{ task.description }}</h3>
+  <br>
+  <h3>Date : {{ task.due_date }}</h3>
+  <br>
+  <h3>Status : {{ task.status }}</h3>
+  <br>
+  <h3>Category : {{ task.category.name }}</h3>
+  <br>
+  <h3>Tag : {{ tag.name }}</h3>
   
 {% endblock %}
