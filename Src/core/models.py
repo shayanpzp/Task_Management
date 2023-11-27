@@ -13,3 +13,6 @@ class Task(models.Model):
     status = models.CharField(max_length=20)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag)
+
+    def delete_task(self):
+        self.delete()

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, get_object_or_404, redirect
 from core.models import Category, Tag, Task
 from .models import Task
 from .forms import TaskForm
@@ -33,3 +33,8 @@ def add_task(request):
         form = TaskForm()
 
     return render(request, 'add_task.html', {'form': form})
+
+def delete_task(request, task_id):
+    task = get_object_or_404(Task, pk=task_id)
+    task.delete_task()
+    return redirect('all_tasks')
