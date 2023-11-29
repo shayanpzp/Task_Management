@@ -2,7 +2,7 @@
 
 Welcome to the Django Task Management project! This web application helps you manage and keep track of your tasks with a clean and user-friendly interface.
 
-## Table of Contents
+## Table of Contents 📝
 
 - [Features](#features)
 - [Installation](#installation)
@@ -20,7 +20,7 @@ Welcome to the Django Task Management project! This web application helps you ma
 - Clean and modern design using Bootstrap.
 - Responsive HTML for optimal viewing on various devices.
 
-## Installation
+## Installation 💻
 
 1. Clone the repository:
 
@@ -56,10 +56,10 @@ Welcome to the Django Task Management project! This web application helps you ma
 
 2. Open your browser and navigate to [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to access the Task Management application.
 
-## Project Structure
+## Project Structure 🚀
 
 ```plaintext
-project/
+Src/
     core/
         __init__.py
         admin.py
@@ -68,8 +68,15 @@ project/
             __init__.py
         models.py
         tests.py
+        forms.py
+        urls.py
         views.py
     manage.py
+    static/
+        css/
+            dark-mode.css
+        js/
+            dark-mode.js
     src/
         __init__.py
         asgi.py
@@ -77,6 +84,7 @@ project/
         urls.py
         wsgi.py
     templates/
+        add_task.html
         base.html
         all_tasks.html
         search_tasks.html
