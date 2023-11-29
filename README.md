@@ -19,19 +19,20 @@ Welcome to the Django Task Management project! This web application helps you ma
 - Navigation bar for easy access to different sections.
 - Clean and modern design using Bootstrap.
 - Responsive HTML for optimal viewing on various devices.
+- Change UI to the dark version by button.
 
 ## Installation 💻
 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/your-repo.git
+    git clone https://github.com/shayanpzp/Task_Management.git
     ```
 
 2. Change into the project directory:
 
     ```bash
-    cd your-repo
+    cd Task_Management
     ```
 
 3. Install dependencies:
