@@ -1,4 +1,3 @@
-# core/forms.py
 from django import forms
 from .models import Task, Category, Tag
 
@@ -39,8 +38,9 @@ class TaskForm(forms.ModelForm):
         label='Category',
         queryset=Category.objects.all(),
         widget=forms.Select(attrs={'class': 'form-control'}),
-        required=False  
+        required=False
     )
+
 
     tags = forms.ModelMultipleChoiceField(
         label='Tags',

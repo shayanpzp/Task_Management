@@ -16,3 +16,5 @@ class Task(models.Model):
 
     def delete_task(self):
         self.delete()
+
+

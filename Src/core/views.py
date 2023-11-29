@@ -25,23 +25,20 @@ def view_task(request, task_id):
     return render(request, 'view_task.html', {'task': task})
 
 
+
+
 def add_task(request):
     if request.method == 'POST':
         form = TaskForm(request.POST)
         if form.is_valid():
-            task = form.save(commit=False)
-            
-            
-            if form.cleaned_data['category'] is None:
-                
-                task.category = Category.objects.get_or_create(name='Uncategorized')[0]
-
-            task.save()
+            form.save()
             return redirect('all_tasks')
     else:
         form = TaskForm()
 
     return render(request, 'add_task.html', {'form': form})
+
+
 
 def delete_task(request, task_id):
     task = get_object_or_404(Task, pk=task_id)
