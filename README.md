@@ -85,10 +85,14 @@ Src/
         urls.py
         wsgi.py
     templates/
+        img/
+            Alternate_Task_Manager_icon.png
         add_task.html
         base.html
         all_tasks.html
         search_tasks.html
+        delete_task.html
+        edit_task.html
         view_task.html
     .gitignore
     README.md
