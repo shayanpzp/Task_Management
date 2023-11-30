@@ -13,6 +13,8 @@
   <br>
   <h3>Category : {{ task.category.name }}</h3>
   <br>
-  <h3>Tag : {{ tag.name }}</h3>
+  <h3>Tag : {% for tag in task.tags.all %}
+    {{ tag.name }}{% if not forloop.last %}, {% endif %}
+  {% endfor %}</h3>
   
 {% endblock %}

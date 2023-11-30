@@ -35,7 +35,6 @@ def add_task(request):
         form = TaskForm(request.POST)
         if form.is_valid():
             form.save()
-            print(form.cleaned_data['category'])
             return redirect('all_tasks')
     else:
         form = TaskForm()

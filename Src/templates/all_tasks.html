@@ -14,14 +14,15 @@
         <th>Status</th>
         <th>Category</th>
         <th>Tags</th>
-        <th>Delete</th>
         <th>Edit</th>
+        <th>Delete</th>
+        
       </tr>
     </thead>
     <tbody>
       {% for task in tasks %}
         <tr>
-          <td><a  href="{% url 'view_task' task.id %}">{{ task.title }}</a></td>
+          <td><a style="color:royalblue; text-decoration: none;"  href="{% url 'view_task' task.id %}">{{ task.title }}</a></td>
           <td>{{ task.description }}</td>
           <td>{{ task.due_date }}</td>
           <td>{{ task.status }}</td>
@@ -31,8 +32,9 @@
               {{ tag.name }}{% if not forloop.last %}, {% endif %}
             {% endfor %}
           </td>
-          <td><a href="{% url 'delete_task' task.id %}">Delete</a></td>
-          <td><a href="{% url 'edit_task' task.id %}">Edit</a></td>
+          <td><a style="text-decoration: none;" href="{% url 'edit_task' task.id %}">Edit</a></td>
+          <td><a style="text-decoration: none;" href="{% url 'delete_task' task.id %}">Delete</a></td>
+          
         </tr>
       {% endfor %}
     </tbody>
